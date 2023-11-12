@@ -1,0 +1,14 @@
+<form>
+  <field>
+    <id>bridges.enabled</id>
+    <label>Enable</label>
+    <type>checkbox</type>
+    <help>Enabling this will write the bridge relay to the config file.</help>
+  </field>
+  <field>
+    <id>bridges.config</id>
+    <label>Bridge relay config</label>
+    <type>text</type>
+    <help>Configuration string of bridge relay.</help>
+  </field>
+</form>

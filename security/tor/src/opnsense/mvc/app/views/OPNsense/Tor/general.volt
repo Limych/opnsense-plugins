@@ -115,6 +115,16 @@ $( document ).ready(function() {
           'options':{selection:false, multiSelect:false}
         }
     );
+    $("#grid-bridges").UIBootgrid(
+        { 'search':'/api/tor/exitacl/searchacl',
+          'get':'/api/tor/exitacl/getacl/',
+          'set':'/api/tor/exitacl/setacl/',
+          'add':'/api/tor/exitacl/addacl/',
+          'del':'/api/tor/exitacl/delacl/',
+          'toggle':'/api/tor/exitacl/toggleacl/',
+          'options':{selection:false, multiSelect:false}
+        }
+    );
     $("#grid-hidservauth").UIBootgrid(
         { 'search':'/api/tor/general/searchhidservauth',
           'get':'/api/tor/general/gethidservauth/',
@@ -136,6 +146,7 @@ $( document ).ready(function() {
     <li><a data-toggle="tab" href="#hiddenrouting">{{ lang._('Onion Service Routing') }}</a></li>
     <li><a data-toggle="tab" href="#relay">{{ lang._('Relaying') }}</a></li>
     <li><a data-toggle="tab" href="#exitnodeacl">{{ lang._('Exit Node ACL') }}</a></li>
+    <li><a data-toggle="tab" href="#bridges">{{ lang._('Bridge relays') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content" style="padding-bottom: 1.5em;">
@@ -270,6 +281,30 @@ $( document ).ready(function() {
                   <th data-column-id="startport" data-type="string" data-visible="true">{{ lang._('Start Port') }}</th>
                   <th data-column-id="endport" data-type="string" data-visible="true">{{ lang._('End Port') }}</th>
                   <th data-column-id="uuid" data-type="string" data-identifier="true" data-visible="false">{{ lang._('ID') }}</th>
+                  <th data-column-id="commands" data-formatter="commands" data-sortable="false">{{ lang._('Commands') }}</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <td colspan="3"></td>
+                  <td>
+                      <button data-action="add" type="button" class="btn btn-xs btn-default"><span class="fa fa-plus"></span></button>
+                      <!-- <button data-action="deleteSelected" type="button" class="btn btn-xs btn-default"><span class="fa fa-trash-o"></span></button> -->
+                      <button type="button" class="btn btn-xs reload_btn btn-primary"><span class="fa fa-refresh reloadAct_progress"></span> {{ lang._('Reload Service') }}</button>
+                  </td>
+              </tr>
+          </tfoot>
+      </table>
+    </div>
+
+    <div id="bridges" class="tab-pane fade in">
+        <table id="grid-bridges" class="table table-responsive" data-editDialog="torexitacldlg">
+          <thead>
+              <tr>
+                  <th data-column-id="enabled" data-type="string" data-formatter="rowtoggle">{{ lang._('Enabled') }}</th>
+                  <th data-column-id="config" data-type="string" data-visible="true">{{ lang._('Config') }}</th>
                   <th data-column-id="commands" data-formatter="commands" data-sortable="false">{{ lang._('Commands') }}</th>
               </tr>
           </thead>

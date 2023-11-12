@@ -1,0 +1,15 @@
+<model>
+  <mount>//OPNsense/tor/bridges</mount>
+  <description>Bridge relays</description>
+  <items>
+    <policy type="ArrayField">
+      <enabled type="BooleanField">
+        <default>1</default>
+        <Required>Y</Required>
+      </enabled>
+      <config type="TextField">
+        <Required>Y</Required>
+      </config>
+    </policy>
+  </items>
+</model>

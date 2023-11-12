@@ -45,6 +45,7 @@ class IndexController extends \OPNsense\Base\IndexController
         $this->view->relay = $this->getForm("relay");
         $this->view->hidservauth = $this->getForm("hidservauth");
         $this->view->exitpolicy = $this->getForm("acl_exitpolicy");
+        $this->view->bridges = $this->getForm("bridges");
         $this->view->pick('OPNsense/Tor/general');
     }
 
