@@ -9,6 +9,7 @@
       </enabled>
       <config type="TextField">
         <Required>Y</Required>
+        <mask>/^.+$/</mask>
       </config>
     </bridge>
   </items>
