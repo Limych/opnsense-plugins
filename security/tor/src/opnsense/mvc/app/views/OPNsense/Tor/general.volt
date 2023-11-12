@@ -116,12 +116,12 @@ $( document ).ready(function() {
         }
     );
     $("#grid-bridges").UIBootgrid(
-        { 'search':'/api/tor/exitacl/searchacl',
-          'get':'/api/tor/exitacl/getacl/',
-          'set':'/api/tor/exitacl/setacl/',
-          'add':'/api/tor/exitacl/addacl/',
-          'del':'/api/tor/exitacl/delacl/',
-          'toggle':'/api/tor/exitacl/toggleacl/',
+        { 'search':'/api/tor/bridges/searchacl',
+          'get':'/api/tor/bridges/getacl/',
+          'set':'/api/tor/bridges/setacl/',
+          'add':'/api/tor/bridges/addacl/',
+          'del':'/api/tor/bridges/delacl/',
+          'toggle':'/api/tor/bridges/toggleacl/',
           'options':{selection:false, multiSelect:false}
         }
     );
