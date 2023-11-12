@@ -300,7 +300,7 @@ $( document ).ready(function() {
     </div>
 
     <div id="bridges" class="tab-pane fade in">
-        <table id="grid-bridges" class="table table-responsive" data-editDialog="torexitacldlg">
+        <table id="grid-bridges" class="table table-responsive" data-editDialog="bridgesdlg">
           <thead>
               <tr>
                   <th data-column-id="enabled" data-type="string" data-formatter="rowtoggle">{{ lang._('Enabled') }}</th>
@@ -328,4 +328,5 @@ $( document ).ready(function() {
 {{ partial("layout_partials/base_dialog",['fields': hidden_service,'id':'hiddenservicedlg', 'label':lang._('Edit Onion Service')]) }}
 {{ partial("layout_partials/base_dialog",['fields': hidden_service_acl,'id':'hiddenserviceacl', 'label':lang._('Edit Onion Service Route')]) }}
 {{ partial("layout_partials/base_dialog",['fields': exitpolicy,'id':'torexitacldlg', 'label':lang._('Edit Exit Node ACL')]) }}
+{{ partial("layout_partials/base_dialog",['fields': bridges,'id':'bridgesdlg', 'label':lang._('Edit Bridge relay')]) }}
 {{ partial("layout_partials/base_dialog",['fields': hidservauth,'id':'hidservauthdlg', 'label':lang._('Edit Hidden Service Credentials')]) }}
