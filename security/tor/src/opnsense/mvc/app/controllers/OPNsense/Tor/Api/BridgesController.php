@@ -1,7 +1,7 @@
 <?php
 
 /*
- *    Copyright (C) 2017 Fabian Franz
+ *    Copyright (C) 2023 Andrey "Limych" Khrolenok
  *    All rights reserved.
  *
  *    Redistribution and use in source and binary forms, with or without
@@ -28,12 +28,12 @@
 
 namespace OPNsense\Tor\Api;
 
-use OPNsense\Tor\ACLSocksPolicy;
+use OPNsense\Tor\Bridges;
 use OPNsense\Core\Config;
 use OPNsense\Base\ApiMutableModelControllerBase;
 use OPNsense\Base\UIModelGrid;
 
-class ExitaclController extends ApiMutableModelControllerBase
+class BridgesController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'bridges';
     protected static $internalModelClass = '\OPNsense\Tor\Bridges';

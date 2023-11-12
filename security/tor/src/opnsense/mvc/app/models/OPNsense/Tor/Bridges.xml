@@ -2,7 +2,7 @@
   <mount>//OPNsense/tor/bridges</mount>
   <description>Bridge relays</description>
   <items>
-    <policy type="ArrayField">
+    <bridge type="ArrayField">
       <enabled type="BooleanField">
         <default>1</default>
         <Required>Y</Required>
@@ -10,6 +10,6 @@
       <config type="TextField">
         <Required>Y</Required>
       </config>
-    </policy>
+    </bridge>
   </items>
 </model>

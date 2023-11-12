@@ -257,11 +257,11 @@ PublishServerDescriptor {{ OPNsense.tor.relay.publish|default('0') }}
 {% endif %}
 
 {% if helpers.exists('OPNsense.tor.bridges') %}
-{%   if helpers.exists('OPNsense.tor.bridges.bridges') %}
+{%   if helpers.exists('OPNsense.tor.bridges.bridge') %}
 # Bridge relays
 
 UseBridges 1
-{%     for bridge in helpers.toList('OPNsense.tor.bridges.bridges') %}
+{%     for bridge in helpers.toList('OPNsense.tor.bridges.bridge') %}
 {%       if bridge.enabled == '1' %}
 Bridge {{ bridge.config }}
 {%       endif %}
