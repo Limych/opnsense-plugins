@@ -39,27 +39,27 @@ class BridgesController extends ApiMutableModelControllerBase
     protected static $internalModelClass = '\OPNsense\Tor\Bridges';
     public function searchaclAction()
     {
-        return $this->searchBase('bridges', array('enabled', 'config'));
+        return $this->searchBase('bridge', array('enabled', 'config'));
     }
     public function getaclAction($uuid = null)
     {
         $this->sessionClose();
-        return $this->getBase('bridges', 'bridges', $uuid);
+        return $this->getBase('bridges', 'bridge', $uuid);
     }
     public function addaclAction()
     {
-        return $this->addBase('bridges', 'bridges');
+        return $this->addBase('bridges', 'bridge');
     }
     public function delaclAction($uuid)
     {
-        return $this->delBase('bridges', $uuid);
+        return $this->delBase('bridge', $uuid);
     }
     public function setaclAction($uuid)
     {
-        return $this->setBase('bridges', 'bridges', $uuid);
+        return $this->setBase('bridges', 'bridge', $uuid);
     }
     public function toggleaclAction($uuid)
     {
-        return $this->toggleBase('bridges', $uuid);
+        return $this->toggleBase('bridge', $uuid);
     }
 }
